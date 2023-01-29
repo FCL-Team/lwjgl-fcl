@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0081b3bd-1990-4f25-918a-6ebdc3532b55" name="变更" comment="变更" />
+    <list default="true" id="0081b3bd-1990-4f25-918a-6ebdc3532b55" name="变更" comment="变更">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +136,7 @@
       <workItem from="1674020755055" duration="672000" />
       <workItem from="1674977216134" duration="1218000" />
       <workItem from="1674978440285" duration="1899000" />
-      <workItem from="1674980346821" duration="2000000" />
+      <workItem from="1674980346821" duration="2432000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1673531815463</created>
@@ -148,6 +150,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
