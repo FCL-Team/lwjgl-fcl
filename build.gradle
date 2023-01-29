@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.lwjgl'
+
+repositories {
+    mavenCentral()
+}
+
+jar{
+    archiveFileName = 'lwjgl.jar'
+    manifest {
+        attributes 'Manifest-Version': '1.0'
+    }
+    File versionFile = file("D:\\Projects\\FCL\\LWJGL-FCL\\build\\libs\\version")
+    versionFile.write(String.valueOf(new Date().getTime()))
+}
+
+dependencies {
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+}
