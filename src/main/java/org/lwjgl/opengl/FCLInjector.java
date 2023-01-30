@@ -14,6 +14,7 @@ public class FCLInjector {
     private static final String HIT_RESULT_TYPE_UNKNOWN      = "UNKNOWN";
     private static final String HIT_RESULT_TYPE_MISS         = "MISS";
     private static final String HIT_RESULT_TYPE_BLOCK        = "BLOCK";
+    private static final String HIT_RESULT_TYPE_BLOCK_OLD    = "TILE";
     private static final String HIT_RESULT_TYPE_ENTITY       = "ENTITY";
 
     private static final int INJECTOR_MODE_ENABLE            = 1;
@@ -71,6 +72,7 @@ public class FCLInjector {
                 typeInt = 1;
                 break;
             case HIT_RESULT_TYPE_BLOCK:
+            case HIT_RESULT_TYPE_BLOCK_OLD:
                 typeInt = 2;
                 break;
             case HIT_RESULT_TYPE_ENTITY:
@@ -91,6 +93,7 @@ public class FCLInjector {
         }
         if (param0 != null && param1 != null && param2 != null && param3 != null) {
             Object type = null;
+            boolean success = false;
             try {
                 Class<?> minecraftClass = Class.forName(param0, true, classLoader);
                 Method method = minecraftClass.getDeclaredMethod(param1);
@@ -100,24 +103,29 @@ public class FCLInjector {
                 targetField.setAccessible(true);
                 Object target = targetField.get(minecraft);
                 if (target != null) {
-                    if (!highVersion) {
-                        Field typeField = target.getClass().getDeclaredField(param3);
-                        typeField.setAccessible(true);
-                        type = typeField.get(target);
-                    } else {
-                        Method typeMethod = target.getClass().getDeclaredMethod(param3);
-                        typeMethod.setAccessible(true);
-                        type = typeMethod.invoke(target);
-                    }
+                    Field typeField = target.getClass().getDeclaredField(param3);
+                    typeField.setAccessible(true);
+                    type = typeField.get(target);
                 }
+                success = true;
             } catch (ClassNotFoundException | NoSuchFieldException | NoSuchMethodException | IllegalAccessException |
                      InvocationTargetException e) {
                 LWJGLUtil.log(e.getMessage());
             }
-            if (type != null && (type.toString().equals(HIT_RESULT_TYPE_MISS) || type.toString().equals(HIT_RESULT_TYPE_BLOCK) || type.toString().equals(HIT_RESULT_TYPE_ENTITY))) {
-                setHitResultType(type.toString());
+            if (highVersion) {
+                if (type != null && (type.toString().equals(HIT_RESULT_TYPE_MISS) || type.toString().equals(HIT_RESULT_TYPE_BLOCK) || type.toString().equals(HIT_RESULT_TYPE_ENTITY))) {
+                    setHitResultType(type.toString());
+                } else {
+                    setHitResultType(HIT_RESULT_TYPE_UNKNOWN);
+                }
             } else {
-                setHitResultType(HIT_RESULT_TYPE_UNKNOWN);
+                if (success && type == null) {
+                    setHitResultType(HIT_RESULT_TYPE_MISS);
+                } else if (success && (type.toString().equals(HIT_RESULT_TYPE_BLOCK_OLD) || type.toString().equals(HIT_RESULT_TYPE_ENTITY))) {
+                    setHitResultType(type.toString());
+                } else {
+                    setHitResultType(HIT_RESULT_TYPE_UNKNOWN);
+                }
             }
         }
     }

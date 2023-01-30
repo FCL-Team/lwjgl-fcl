@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0081b3bd-1990-4f25-918a-6ebdc3532b55" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lwjgl/LWJGLUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lwjgl/LWJGLUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/FCLInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/FCLInjector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +137,7 @@
       <workItem from="1674020755055" duration="672000" />
       <workItem from="1674977216134" duration="1218000" />
       <workItem from="1674978440285" duration="1899000" />
-      <workItem from="1674980346821" duration="11111000" />
+      <workItem from="1674980346821" duration="14554000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1673531815463</created>
