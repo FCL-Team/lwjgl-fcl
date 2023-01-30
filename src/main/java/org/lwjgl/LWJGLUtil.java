@@ -514,14 +514,14 @@ public class LWJGLUtil {
 		});
 	}
 
+	public static native void nLog(String msg);
+
 	/**
-	 * Prints the given message to System.err if DEBUG is true.
-	 *
 	 * @param msg Message to print
 	 */
 	public static void log(CharSequence msg) {
 		if (DEBUG) {
-			System.err.println("[LWJGL] " + msg);
+			nLog("[LWJGL] " + msg);
 		}
 	}
 

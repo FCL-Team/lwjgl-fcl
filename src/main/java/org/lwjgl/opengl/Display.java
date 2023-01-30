@@ -138,8 +138,9 @@ public final class Display {
 			current_mode = initial_mode = display_impl.init();
 			LWJGLUtil.log("Initial mode: " + initial_mode);
 		} catch (LWJGLException e) {
+			LWJGLUtil.log(e.getMessage());
 			throw new RuntimeException(e);
-		};
+		}
 	}
 
 	/**
