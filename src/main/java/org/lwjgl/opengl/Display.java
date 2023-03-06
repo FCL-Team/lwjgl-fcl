@@ -436,8 +436,8 @@ public final class Display {
 		synchronized ( GlobalLock.lock ) {
 			if ( Display.parent != parent ) {
 				Display.parent = parent;
-				int width = Integer.parseInt(System.getProperty("lwjgl2.width") == null ? "-1" : System.getProperty("lwjgl2.width"));
-				int height = Integer.parseInt(System.getProperty("lwjgl2.height") == null ? "-1" : System.getProperty("lwjgl2.height"));
+				int width = Integer.parseInt(System.getProperty("window.width") == null ? "-1" : System.getProperty("window.width"));
+				int height = Integer.parseInt(System.getProperty("window.height") == null ? "-1" : System.getProperty("window.height"));
 				if (width != -1 && height != -1) {
 					Display.parent.setSize(width, height);
 				}
