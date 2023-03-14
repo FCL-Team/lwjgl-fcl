@@ -12,7 +12,7 @@
     <list default="true" id="0081b3bd-1990-4f25-918a-6ebdc3532b55" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/ContextCapabilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/ContextCapabilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/DisplayMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lwjgl/opengl/DisplayMode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +141,13 @@
       <workItem from="1674980346821" duration="14554000" />
       <workItem from="1678241696281" duration="80000" />
       <workItem from="1678608709414" duration="1029000" />
+      <workItem from="1678614968193" duration="699000" />
+      <workItem from="1678764495772" duration="1054000" />
+      <workItem from="1678765620633" duration="12000" />
+      <workItem from="1678765853099" duration="1290000" />
+      <workItem from="1678767532341" duration="571000" />
+      <workItem from="1678768402976" duration="12000" />
+      <workItem from="1678768541472" duration="390000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1673531815463</created>

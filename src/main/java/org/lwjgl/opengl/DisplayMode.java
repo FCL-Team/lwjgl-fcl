@@ -68,11 +68,13 @@ public final class DisplayMode {
 	}
 
 	private DisplayMode(int width, int height, int bpp, int freq, boolean fullscreen) {
+		width = Integer.parseInt(System.getProperty("window.width") == null ? "-1" : System.getProperty("window.width"));
+		height = Integer.parseInt(System.getProperty("window.height") == null ? "-1" : System.getProperty("window.height"));
 		this.width = width;
 		this.height = height;
 		this.bpp = bpp;
 		this.freq = freq;
-		this.fullscreen = fullscreen;
+		this.fullscreen = false;
 	}
 
 	/** True if this instance can be used for fullscreen modes */
